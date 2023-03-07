@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class sufragantesController extends Controller
 {
     public function index() {
-        $listado = Sufragantes::all();
+        $listado = Sufragantes::paginate(5);
         return view ('sufragantes.listar', compact('listado'));
        
     }
