@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\sufragantesController;
+use App\Models\Sufragantes;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,4 +18,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/sufragantes', [sufragantesController::class,'index']);
+Route::controller(sufragantesController::class)->group(function(){
+    Route::get('/sufragantes-listar','index');
+
+    Route::get('/sufragantes-agregar', 'mostrarForm');
+
+    Route::post('/sufragantes-agregar', 'insertar');
+
+    Route::get('/sufragantes/{id}/editar', 'edit');
+});
+
+
+
+
