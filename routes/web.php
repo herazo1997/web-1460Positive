@@ -15,7 +15,7 @@ use App\Models\Sufragantes;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('principal');
 });
 
 Route::controller(sufragantesController::class)->group(function(){
