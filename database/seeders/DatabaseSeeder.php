@@ -20,7 +20,5 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-
-        \App\Models\Sufragantes::factory(1000)->create();
     }
 }
