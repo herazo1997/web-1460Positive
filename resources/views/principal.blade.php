@@ -330,7 +330,7 @@
   <script src="../resources/css/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="../resources/css/js/main.js"></script>
+  <script src="../resources/js/main.js"></script>
 
 </body>
 
