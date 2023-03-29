@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h3>Listado de Sufragantes</h3>
+<h3>Listado De Sufragantes</h3>
   <div class="container text-center">
     <div class="row align-items-start">
     <table class="table table-bordered border-dark">
