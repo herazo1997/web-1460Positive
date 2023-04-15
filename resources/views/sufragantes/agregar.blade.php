@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h3>Agregar un Nuevo Sufragante</h3>
+<h3>Agregar Un Nuevo Sufragante</h3>
     <div class="container">
     <form action="" method="post">
         @csrf
