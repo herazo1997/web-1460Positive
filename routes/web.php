@@ -21,11 +21,15 @@ Route::get('/', function () {
 Route::controller(sufragantesController::class)->group(function(){
     Route::get('/sufragantes-listar','index');
 
-    Route::get('/sufragantes-agregar', 'mostrarForm');
+    Route::get('/sufragantes-agregar', 'mostrarForm')->name('user.mostrar');
 
-    Route::post('/sufragantes-agregar', 'insertar');
+    Route::post('/sufragantes-agregar', 'insertar')->name('user.crear');
 
-    Route::get('/sufragantes/{id}/editar', 'edit');
+    Route::get('/sufragantes/{id}/editar', 'edit')->name('user.edit');
+
+    Route::put('/sufragantes/{id}/actualizar', 'update')->name('user.update');
+
+    Route::delete('/sufragantes/{id}/eliminar', 'destroy')->name('user.destroy');
 });
 
 
