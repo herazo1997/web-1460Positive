@@ -6,25 +6,26 @@
 
 <h3>Editar Sufragante</h3>
     <div class="container">
-    <form action="" method="post">
+    <form action="{{route('user.update', $listados->id)}}" method="post">
         @csrf
+        @method('PUT')
         <label>Cédula</label>
-        <input vaule = "" type="text" name="cedula"/>
+        <input type="text" name="cedula" value="{{$listados->su_cedula}}"/>
         <br>
         <label>Nombres</label>
-        <input vaule = "" type="text" name="nombres"/>
+        <input type="text" name="nombres" value="{{$listados->su_nombres}}"/>
         <br>
         <label>Apellidos</label>
-        <input vaule = "" type="text" name="apellidos"/>
+        <input type="text" name="apellidos" value="{{$listados->su_apellidos}}"/>
         <br>
         <label>Celular</label>
-        <input vaule = "" type="number" name="number"/>
+        <input type="text" name="number" value="{{$listados->su_celular}}"/>
         <br>
         <label>Correo</label>
-        <input vaule = "" type="email" name="email"/>
+        <input type="email" name="email" value="{{$listados->su_email}}"/>
         <br>
         <label>fecha de Nacimiento</label>
-        <input vaule = "" type="date" name="date"/>
+        <input type="date" name="date" value="{{$listados->su_fecha_nacimiento}}"/>
         <br>
         <button type="submit">Guardar Registro</button></button>
 

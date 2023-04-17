@@ -6,7 +6,7 @@
 
 <h3>Agregar Un Nuevo Sufragante</h3>
     <div class="container">
-    <form action="" method="post">
+    <form action="{{route('user.crear')}}" method="post">
         @csrf
         <label>Cédula</label>
         <input type="text" name="cedula"/>
@@ -18,7 +18,7 @@
         <input type="text" name="apellidos"/>
         <br>
         <label>Celular</label>
-        <input type="number" name="number"/>
+        <input type="text" name="number"/>
         <br>
         <label>Correo</label>
         <input type="email" name="email"/>
