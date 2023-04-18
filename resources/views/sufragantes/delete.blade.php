@@ -1,6 +1,6 @@
 
 
-<div class="modal fade" id="modal-delete-{{$listados->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal-delete-{{$listados->id}}" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
 
   <form action="{{route('user.destroy', $listados->id)}}" method="post">

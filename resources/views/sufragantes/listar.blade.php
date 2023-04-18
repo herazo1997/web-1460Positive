@@ -6,14 +6,15 @@
 <div class="container">
 <h3>Listado De Sufragantes</h3>
 <div class="row">
-  <div class="col-xl-12">
+  <div class="col-sm-12">
     <div class="col-auto my-1">
       <a href="{{route('user.crear')}}" class="btn btn-success">Agregar Nuevo</a>
     </div>
  
     <div class="container text-center">
+      <div class="table-responsive-sm">
   
-    <table class="table table-bordered border-dark">
+    <table class="table table-bordered border-dark table-sm">
         <thead>
           <tr>
             <th class="table-info" scope="col">Código</th>
@@ -57,4 +58,5 @@
   </div>
   </div>
   </div>
+</div>
 @endsection
