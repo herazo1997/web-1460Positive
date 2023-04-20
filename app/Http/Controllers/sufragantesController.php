@@ -7,17 +7,19 @@ use Illuminate\Http\Request;
 
 class sufragantesController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $listado = Sufragantes::paginate(5);
-        return view ('sufragantes.listar', compact('listado'));
-       
+        return view('sufragantes.listar', compact('listado'));
     }
-    
-    public function mostrarForm(){
+
+    public function mostrarForm()
+    {
         return view('sufragantes.agregar');
     }
 
-    public function insertar(Request $request){
+    public function insertar(Request $request)
+    {
         $user = new Sufragantes();
         $user->su_cedula = $request->input('cedula');
         $user->su_nombres = $request->input('nombres');
@@ -27,19 +29,20 @@ class sufragantesController extends Controller
         $user->su_fecha_nacimiento = $request->input('date');
         $user->save();
 
-        return redirect('sufragantes-listar');
+        return redirect()->route('user.listar');
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
 
-        $listados=Sufragantes::findOrFail($id);
+        $listados = Sufragantes::findOrFail($id);
         return view('sufragantes.editar', compact('listados'));
-        
     }
 
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
 
-        $listados=Sufragantes::findOrFail($id);
+        $listados = Sufragantes::findOrFail($id);
         $listados->su_cedula = $request->input('cedula');
         $listados->su_nombres = $request->input('nombres');
         $listados->su_apellidos = $request->input('apellidos');
@@ -48,16 +51,15 @@ class sufragantesController extends Controller
         $listados->su_fecha_nacimiento = $request->input('date');
         $listados->save();
 
-        return redirect('sufragantes-listar');
-
+        return redirect()->route('user.listar');
     }
 
-    public function destroy($id) {
+    public function destroy($id)
+    {
 
-        $listados=Sufragantes::findOrFail($id);
+        $listados = Sufragantes::findOrFail($id);
         $listados->delete();
 
-        return redirect('sufragantes-listar');
+        return redirect()->route('user.listar');
     }
-    
 }
