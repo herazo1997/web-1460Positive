@@ -3,6 +3,7 @@
 @section('title', 'Lista de Sufragantes')
 
 @section('content')
+
     <div class="container">
         <h3>Listado De Sufragantes</h3>
         <div class="row">
@@ -61,4 +62,5 @@
         </div>
     </div>
     </div>
+
 @endsection
