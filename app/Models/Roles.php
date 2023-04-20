@@ -5,7 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class tipoAdmin extends Model
+class Roles extends Model
 {
     use HasFactory;
+
+    protected $table = ('roles');
+    protected $primaryKey = 'codigo_rol';
+    protected $keyTipe = 'int';
+    public $incrementing = true;
+    public $timestamps = false;
 }

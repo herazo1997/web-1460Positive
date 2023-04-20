@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Usuarios extends Model
+class Usuario_Roles extends Model
 {
     use HasFactory;
 
-    protected $table = ('usuarios');
-    protected $primaryKey = 'id_usuario';
-    public $incrementing = true;
+    protected $table = ('usuario_roles');
+    protected $primaryKey = false;
+    public $incrementing = false;
     protected $keyTipe = 'int';
     public $timestamps = false;
 }

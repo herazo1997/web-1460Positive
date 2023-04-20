@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\sufragantesController;
+use App\Http\Controllers\usuariosController;
 use App\Models\Sufragantes;
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,8 @@ Route::get('/', function () {
     return view('principal');
 });
 
-Route::controller(sufragantesController::class)->group(function(){
-    Route::get('/sufragantes-listar','index');
+Route::controller(sufragantesController::class)->group(function () {
+    Route::get('/sufragantes-listar', 'index')->name('user.listar');
 
     Route::get('/sufragantes-agregar', 'mostrarForm')->name('user.mostrar');
 
@@ -33,5 +34,16 @@ Route::controller(sufragantesController::class)->group(function(){
 });
 
 
+Route::controller(usuariosController::class)->group(function () {
+    Route::get('/usuarios', 'index')->name('us.listar');
 
+    Route::get('/usuarios-agregar', 'mostrar')->name('us.mostrar');
 
+    Route::post('/usuarios-agregar', 'crear')->name('us.crear');
+
+    Route::get('/usuarios/{id}/editar', 'edit')->name('us.edit');
+
+    Route::put('/usuarios/{id}/actualizar', 'update')->name('us.update');
+
+    Route::delete('/usuarios/id/eliminar', 'destroy')->name('us.destroy');
+});

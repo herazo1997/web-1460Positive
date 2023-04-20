@@ -16,5 +16,4 @@ class Sufragantes extends Model
     public $incrementing = true;
     protected $keyTipe = 'int';
     public $timestamps = true;
-
 }
