@@ -6,7 +6,7 @@
 
     <h3>Editar Usuarios</h3>
     <div class="container">
-        <form action="{{ route('us.update', $usuario->id) }}" method="post">
+        <form action="{{ route('us.update', $usuario->id_usuario) }}" method="post">
             @csrf
             @method('PUT')
             <label>Nombres</label>
@@ -22,7 +22,7 @@
             <input type="email" name="emali" value="{{ $usuario->u_email }}" />
             <br>
             <label>Fecha de Registro</label>
-            <input type="date" name="fecha" value="{{ $usuario->u_fecha }}" />
+            <input type="date" name="date" value="{{ $usuario->u_fecha }}" />
             <br>
             <button type="submit">Actualizar Usuario</button></button>
 

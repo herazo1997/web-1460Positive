@@ -54,7 +54,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {{ $listado->appends(request()->query())->links('pagination::bootstrap-4') }}
+                        {{ $listado->appends(request()->query())->links('pagination::bootstrap-5') }}
                     </div>
                 </div>
             </div>

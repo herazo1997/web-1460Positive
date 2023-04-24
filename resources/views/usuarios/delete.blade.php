@@ -1,8 +1,8 @@
-<div class="modal fade" id="modal-delete-{{ $usuario->id }}" data-bs-backdrop="static" tabindex="-1"
+<div class="modal fade" id="modal-delete-{{ $usuario->id_usuario }}" data-bs-backdrop="static" tabindex="-1"
     aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
 
-        <form action="{{ route('us.destroy', $usuario->id) }}" method="post">
+        <form action="{{ route('us.destroy', $usuario->id_usuario) }}" method="post">
             @csrf
             @method('DELETE')
 

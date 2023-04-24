@@ -45,5 +45,5 @@ Route::controller(usuariosController::class)->group(function () {
 
     Route::put('/usuarios/{id}/actualizar', 'update')->name('us.update');
 
-    Route::delete('/usuarios/id/eliminar', 'destroy')->name('us.destroy');
+    Route::delete('/usuarios/{id}/eliminar', 'destroy')->name('us.destroy');
 });

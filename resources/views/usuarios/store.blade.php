@@ -21,7 +21,7 @@
             <input type="email" name="email" />
             <br>
             <label>Fecha de Registro</label>
-            <input type="date" name="fecha" />
+            <input type="date" name="date" />
             <br>
             <button type="submit">Guardar Registro</button></button>
 
