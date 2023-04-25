@@ -36,10 +36,11 @@
                                         <td class="table-info">{{ $usuario->u_password }}</td>
                                         <td class="table-info">{{ $usuario->u_email }}</td>
                                         <td class="table-info">{{ $usuario->u_fecha }}</td>
+
                                         <td class="table-info"> <a href="{{ route('us.edit', $usuario->id_usuario) }}"
                                                 class="btn btn-warning btn-sm"> Editar </a>
                                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                                data-bs-target="#modal-delete-{{ $usuario->id_usuario }}">
+                                                data-bs-target="#modal-delete-{{ $usuario->id_usuario }}">                    
                                                 Eliminar
                                             </button>
                                         </td>
@@ -48,7 +49,9 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        
                         {{ $usuarios->appends(request()->query())->links('pagination::bootstrap-5') }}
+
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@
 
     <h3>Editar Usuarios</h3>
     <div class="container">
+
         <form action="{{ route('us.update', $usuario->id_usuario) }}" method="post">
             @csrf
             @method('PUT')

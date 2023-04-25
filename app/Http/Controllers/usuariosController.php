@@ -25,16 +25,18 @@ class usuariosController extends Controller
         $usuario->u_usuario = $request->input('usuario');
         $usuario->u_password = $request->input('password');
         $usuario->u_email = $request->input('email');
-        $usuario->u_fecha = $request->input('date');
+        $usuario->u_fecha = $request->input('fecha');
         $usuario->save();
 
         return redirect()->route('us.listar');
     }
 
+
     public function edit($id_usuario)
     {
 
         $usuario = Usuarios::findOrFail($id_usuario);
+  
         return view('usuarios.edit', compact('usuario'));
     }
 

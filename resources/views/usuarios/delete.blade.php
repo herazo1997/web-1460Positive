@@ -1,3 +1,4 @@
+
 <div class="modal fade" id="modal-delete-{{ $usuario->id_usuario }}" data-bs-backdrop="static" tabindex="-1"
     aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
