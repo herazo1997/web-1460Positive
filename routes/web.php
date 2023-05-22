@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\sufragantesController;
 use App\Http\Controllers\usuariosController;
-use App\Models\Sufragantes;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +16,7 @@ use App\Models\Sufragantes;
 */
 
 Route::get('/', function () {
-    return view('principal');
+    return view('login');
 });
 
 Route::controller(sufragantesController::class)->group(function () {
