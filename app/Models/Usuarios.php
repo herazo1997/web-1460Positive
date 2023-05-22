@@ -8,10 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Usuarios extends Model
 {
-    use HasFactory;
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
 
-    protected $table = ('usuarios');
+    protected $table = 'usuarios';
     protected $primaryKey = 'id_usuario';
     public $incrementing = true;
     protected $keyTipe = 'int';
