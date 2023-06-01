@@ -15,6 +15,7 @@ class Usuarios extends  Authenticatable
     use HasFactory, SoftDeletes;
 
     protected $table = 'usuarios';
+
     protected $fillable = [
         'u_nombre',
         'u_usuario',
@@ -22,6 +23,7 @@ class Usuarios extends  Authenticatable
         'u_email',
         'u_fecha',
     ];
+
     protected $primaryKey = 'id_usuario';
     public $incrementing = true;
     protected $keyType = 'int';
