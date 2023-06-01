@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\sufragantesController;
 use App\Http\Controllers\usuariosController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ use App\Http\Controllers\usuariosController;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('welcome');
 });
 
 Route::controller(sufragantesController::class)->group(function () {
@@ -48,3 +49,6 @@ Route::controller(usuariosController::class)->group(function () {
     Route::delete('/usuarios/{id}/eliminar', 'destroy')->name('us.destroy');
 
 });
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('show.login');
+Route::post('/login', [AuthController::class, 'login'])->name('us.login');
