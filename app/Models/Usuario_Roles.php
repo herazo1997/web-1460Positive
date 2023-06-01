@@ -9,9 +9,9 @@ class Usuario_Roles extends Model
 {
     use HasFactory;
 
-    protected $table = ('usuario_roles');
+    protected $table = 'usuario_roles';
     protected $primaryKey = false;
     public $incrementing = false;
-    protected $keyTipe = 'int';
+    protected $keyType = 'int';
     public $timestamps = false;
 }

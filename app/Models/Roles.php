@@ -11,7 +11,7 @@ class Roles extends Model
 
     protected $table = ('roles');
     protected $primaryKey = 'codigo_rol';
-    protected $keyTipe = 'int';
+    protected $keyType = 'int';
     public $incrementing = true;
     public $timestamps = false;
 }
